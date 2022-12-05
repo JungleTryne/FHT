@@ -19,7 +19,6 @@ def add_to_bottom(arr: np.ndarray) -> np.ndarray:
 
     delta_height = new_height - height
     if delta_height > 0:
-        # mirror_height_pixels = arr[height - delta_height:height][::-1]
         mirror_height_pixels = np.zeros_like(arr[height - delta_height:height])
         return np.concatenate((arr, mirror_height_pixels), axis=0)
 
